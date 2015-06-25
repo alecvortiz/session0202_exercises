@@ -5,5 +5,24 @@
 	<li>Description: <%= @place.description %></li>
 	<li>Location: <%= @place.location %></li>
 </ul>
+ 
+<h2>Comments</h2>
+<%= render @place.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= form_for([@place, @place.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
+<%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
