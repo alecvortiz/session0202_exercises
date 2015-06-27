@@ -15,16 +15,17 @@ ActiveRecord::Schema.define(version: 20150627161416) do
 
   create_table "solutions", force: :cascade do |t|
     t.string   "name"
-    t.integer  "solute_one"
-    t.integer  "solute_two"
-    t.integer  "solute_three"
-    t.integer  "solute_four"
-    t.integer  "solute_five"
-    t.integer  "stock_one"
-    t.integer  "stock_two"
-    t.integer  "stock_three"
-    t.integer  "stock_four"
-    t.integer  "stock_five"
+    t.float    "solute_one"
+    t.float    "solute_two"
+    t.float    "solute_three"
+    t.float    "solute_four"
+    t.float    "solute_five"
+    t.float    "stock_one"
+    t.float    "stock_two"
+    t.float    "stock_three"
+    t.float    "stock_four"
+    t.float    "stock_five"
+    t.float    "final_volume"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

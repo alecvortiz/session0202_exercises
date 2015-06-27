@@ -1,0 +1,50 @@
+class SolutionsController < ApplicationController
+	def index
+		@solutions = Solution.all
+	end
+
+	def show
+		@solution = Solution.find params[:id]
+	end
+
+	def new
+		@solution = Solution.new
+	end
+
+	def create
+		@solution = Solution.new(place_params)
+		if @solution.save
+			redirect_to @solution 
+		else
+			render 'new' 
+		end
+	end
+
+	def edit
+		@solution = Solution.find(params[:id])
+	end
+
+	def update
+		@solution = Solution.find(params[:id])
+
+		if @solution.update(place_params)
+			redirect_to @solution
+		else 
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@solution = Solution.find(params[:id])
+		@solution.destroy
+
+		redirect_to places_path
+	end
+
+	private 
+		def place_params
+			params.require(:solution).permit(:name, :solute_one, 
+				:solute_two, :solute_three, :solute_four, :solute_five, 
+				:stock_one, :stock_two, :stock_three, :stock_four, :stock_five, :final_volume)
+		end
+end

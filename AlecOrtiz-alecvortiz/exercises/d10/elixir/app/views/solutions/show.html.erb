@@ -1,0 +1,56 @@
+<h1><%= @solution.name %></h1>
+
+<div class= "Solutes">
+<ul>
+	<li>Solute One: <%= @solution.solute_one %></li>
+  <li>Solute Two: <%= @solution.solute_two %></li>
+  <li>Solute Three: <%= @solution.solute_three %></li>
+  <li>Solute Four: <%= @solution.solute_four %></li>
+  <li>Solute Five: <%= @solution.solute_five %></li>
+</ul>
+</div>
+
+<div class= "Stocks">
+<ul>  
+  <li>Stock One: <%= @solution.stock_one %></li>
+  <li>Stock Two: <%= @solution.stock_two %></li>
+  <li>Stock Three: <%= @solution.stock_three %></li>
+  <li>Stock Four: <%= @solution.stock_four %></li>
+  <li>Stock Five: <%= @solution.stock_five %></li>
+</ul>
+</div>
+
+<div class="Volumes">
+
+<li>Volume: <%= sol1 = @solution.solute_one * @solution.final_volume / @solution.stock_one %></li>
+
+<% if !@solution.solute_two.nil? %>
+<li>Volume: <%= sol2 = @solution.solute_two * @solution.final_volume / @solution.stock_two %></li>
+<% else %>
+<% sol2 = 0 %>
+<% end %>
+
+<% if !@solution.solute_three.nil? %>
+<li>Volume: <%= sol3 = @solution.solute_three * @solution.final_volume / @solution.stock_three %></li>
+<% else %>
+<% sol3 = 0 %>
+<% end %>
+
+<% if !@solution.solute_four.nil? %>
+<li>Volume: <%= sol4 = @solution.solute_four * @solution.final_volume / @solution.stock_four %></li>
+<% else %>
+<% sol4 = 0 %>
+<% end %>
+
+<% if !@solution.solute_five.nil? %>
+<li>Volume: <%= sol5 = @solution.solute_five * @solution.final_volume / @solution.stock_five %></li>
+<% else %>
+<% sol5 = 0 %>
+<% end %>
+
+<li> Solvent Volume: <%= @solution.final_volume - sol1 - sol2 - sol3 - sol4 - sol5 %> </li>
+
+</div>
+
+
+ 
