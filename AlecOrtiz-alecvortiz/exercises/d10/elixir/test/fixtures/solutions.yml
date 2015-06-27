@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  solute_one: 1
+  solute_two: 1
+  solute_three: 1
+  solute_four: 1
+  solute_five: 1
+  stock_one: 1
+  stock_two: 1
+  stock_three: 1
+  stock_four: 1
+  stock_five: 1
+
+two:
+  name: MyString
+  solute_one: 1
+  solute_two: 1
+  solute_three: 1
+  solute_four: 1
+  solute_five: 1
+  stock_one: 1
+  stock_two: 1
+  stock_three: 1
+  stock_four: 1
+  stock_five: 1
