@@ -28,28 +28,28 @@
 
 <div class="volumes_2">
 
-<li>Volume: <%= sol1 = @solution.solute_one * @solution.final_volume / @solution.stock_one %></li>
+<li>Volume: <%= sol1 = (@solution.solute_one * @solution.final_volume / @solution.stock_one).round(3) %></li>
 
 <% if !@solution.solute_two.nil? %>
-<li>Volume: <%= sol2 = @solution.solute_two * @solution.final_volume / @solution.stock_two %></li>
+<li>Volume: <%= sol2 = (@solution.solute_two * @solution.final_volume / @solution.stock_two).round(3) %></li>
 <% else %>
 <% sol2 = 0 %>
 <% end %>
 
 <% if !@solution.solute_three.nil? %>
-<li>Volume: <%= sol3 = @solution.solute_three * @solution.final_volume / @solution.stock_three %></li>
+<li>Volume: <%= sol3 = (@solution.solute_three * @solution.final_volume / @solution.stock_three).round(3) %></li>
 <% else %>
 <% sol3 = 0 %>
 <% end %>
 
 <% if !@solution.solute_four.nil? %>
-<li>Volume: <%= sol4 = @solution.solute_four * @solution.final_volume / @solution.stock_four %></li>
+<li>Volume: <%= sol4 = (@solution.solute_four * @solution.final_volume / @solution.stock_four).round(3) %></li>
 <% else %>
 <% sol4 = 0 %>
 <% end %>
 
 <% if !@solution.solute_five.nil? %>
-<li>Volume: <%= sol5 = @solution.solute_five * @solution.final_volume / @solution.stock_five %></li>
+<li>Volume: <%= sol5 = (@solution.solute_five * @solution.final_volume / @solution.stock_five).round(3) %></li>
 <% else %>
 <% sol5 = 0 %>
 <% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  
   root 'solutions#home'
   
   resources :solutions do
