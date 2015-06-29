@@ -1,4 +1,8 @@
 class SolutionsController < ApplicationController
+	
+	def home
+	end
+
 	def index
 		@solutions = Solution.all
 	end
@@ -38,13 +42,14 @@ class SolutionsController < ApplicationController
 		@solution = Solution.find(params[:id])
 		@solution.destroy
 
-		redirect_to places_path
+		redirect_to solutions_path
 	end
 
 	private 
 		def place_params
-			params.require(:solution).permit(:name, :solute_one, 
-				:solute_two, :solute_three, :solute_four, :solute_five, 
-				:stock_one, :stock_two, :stock_three, :stock_four, :stock_five, :final_volume)
+			params.require(:solution).permit(:name, 
+				:solute_one, :solute_two, :solute_three, :solute_four, :solute_five, 
+				:stock_one, :stock_two, :stock_three, :stock_four, :stock_five, :final_volume, 
+				:solute_name_one, :solute_name_two, :solute_name_three, :solute_name_four, :solute_name_five)
 		end
 end

@@ -1,0 +1,10 @@
+<%= form_for([@solution, @solution.solute_names.build]) do |f| %>
+  <p>
+    <%= f.label "Type Here" %><br>
+    <%= f.text_field :solute_name %>
+  </p>
+  
+  <p>
+    <%= f.submit "Add Protocol" %>
+  </p>
+<% end %>

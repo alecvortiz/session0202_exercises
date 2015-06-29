@@ -1,6 +1,18 @@
-<h1> Please make an elixir of life </h1>
+<h1> Saved Recipes </h1>
 
-<a href= "/solutions/new"><img src="/img/potion_for_app.png">
+<%= link_to 'Craft', new_solution_path %>
 
-
-
+<div class="index_page">
+<table>
+	<% @solutions.each do |solution| %>
+		<tr>
+			<td><%= solution.name %> | </td>
+			<td><%= link_to 'Display', solution_path(solution) %> | </td>	
+			<td><%= link_to 'Re-craft', edit_solution_path(solution) %> | </td>
+			<td><%= link_to 'Incinerate', solution_path(solution),
+							method: :delete,
+							data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+</table>
+</div>

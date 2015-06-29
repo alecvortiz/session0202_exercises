@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+.solution_name {
+  position: relative;
+  text-align: center;
+}
+
+.solute_names {
+   position: relative;
+}
+
+.solutes {
+   position: relative;
+   left: 250px;
+   bottom: 283px;
+}
+
+.stocks {
+   position: relative;
+   left: 500px;
+   bottom: 567px;
+}
+
+.final_volume {
+  position: relative;
+  left: 501px;
+  bottom: 580px;
+}
+
+.submit {
+   position: relative;
+   left: 500px;
+   bottom: 580px;
+}
+
+
+.potion {
+  position: relative;
+  bottom: 20px;
+}
+
+.home {
+  text-align: center;
+  color: green;  
+}
+.new {
+  background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1200/typography/1/1/molecule-typography-hd-wallpaper-1920x1200-9815.jpg");
+  background-size: cover;
+  color: white;
+}
+.show {
+  background-image: url("http://th05.deviantart.net/fs70/PRE/f/2011/350/f/8/caffeine_molecule_denim_wallpaper_in_blue_by_averywebdesign-d4j8t5r.png");
+  color: white;
+  background-size: cover;
+  list-style: none;
+}
+
+.solute_names_2 {
+  positon: relative;
+  top: 200px;
+}
+.solutes_2 {
+  position: relative;
+  left: 250px;
+  bottom: 90px;
+}
+.stocks_2 {
+  position: relative;
+  left: 500px;
+  bottom: 180px;
+}
+.volumes_2 {
+  postion: relative;
+  left: 500px; 
+  bottom: 567px;
+}
+
+.edit_page {
+  background-image: url("http://static.hdw.eweb4.com/media/wallpapers_1920x1200/typography/1/1/molecule-typography-hd-wallpaper-1920x1200-9815.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.index_page {
+  
+}
+
+body {
+   background: url("http://i.imgur.com/bHMVnPQ.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.descrip {
+  max-width: 400px;
+  position: relative;
+  left: 500px;
+}

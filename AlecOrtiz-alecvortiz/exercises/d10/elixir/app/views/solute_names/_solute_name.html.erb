@@ -1,0 +1,11 @@
+<p>
+  <strong>Extra Instructions:</strong>
+  <%= solute_name.solute_name %>
+</p>
+ 
+
+<p>
+	 <%= link_to 'Incinerate Protocol', [solute_name.solution, solute_name],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

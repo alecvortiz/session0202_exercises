@@ -1,26 +1,32 @@
+<div class= "show">
 <h1><%= @solution.name %></h1>
 
-<div class= "Solutes">
-<ul>
+
+<div class= "solute_names_2">
+<li>Solute One: <%= @solution.solute_name_one %></li>
+  <li>Solute Two: <%= @solution.solute_name_two %></li>
+  <li>Solute Three: <%= @solution.solute_name_three %></li>
+  <li>Solute Four: <%= @solution.solute_name_four %></li>
+  <li>Solute Five: <%= @solution.solute_name_five %></li>
+</div>
+
+<div class= "solutes_2">
 	<li>Solute One: <%= @solution.solute_one %></li>
   <li>Solute Two: <%= @solution.solute_two %></li>
   <li>Solute Three: <%= @solution.solute_three %></li>
   <li>Solute Four: <%= @solution.solute_four %></li>
   <li>Solute Five: <%= @solution.solute_five %></li>
-</ul>
 </div>
 
-<div class= "Stocks">
-<ul>  
+<div class= "stocks_2">
   <li>Stock One: <%= @solution.stock_one %></li>
   <li>Stock Two: <%= @solution.stock_two %></li>
   <li>Stock Three: <%= @solution.stock_three %></li>
   <li>Stock Four: <%= @solution.stock_four %></li>
   <li>Stock Five: <%= @solution.stock_five %></li>
-</ul>
 </div>
 
-<div class="Volumes">
+<div class="volumes_2">
 
 <li>Volume: <%= sol1 = @solution.solute_one * @solution.final_volume / @solution.stock_one %></li>
 
@@ -52,5 +58,17 @@
 
 </div>
 
+<div class="protocol">
 
+<h2>Protocols</h2>
+<%= render @solution.solute_names %>
+
+<h3>Add Protocol:</h3>
+<%= render 'solute_names/form_two' %>
+
+    <td><%= link_to 'Recipes', solutions_path %></td>
+    <td><%= link_to 'Edit', edit_solution_path(@solution) %></td>
+
+</div>
+</div>
  

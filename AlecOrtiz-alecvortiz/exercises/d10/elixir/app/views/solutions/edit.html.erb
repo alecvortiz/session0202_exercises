@@ -1,8 +1,20 @@
-<div class="new">
-<h1> Craft Potion </h1>
+<div class="edit_page">
 
+<h1> Editing elixir </h1>
 
 <%= form_for @solution do |f| %>
+
+<% if @solution.errors.any? %>
+		<div id="error_explanation" >
+			<h2>
+				<%= pluralize(@solution.errors.count, "error") %> prohibited this solution from being saved: </h2>
+			<ul>
+				<% @solution.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
 <table class="sol_ingredients">
 	<div class= "solution_name">
@@ -106,8 +118,7 @@
 		<%= f.submit %>
 	</p>
 	</div>
-
-	    <td><%= link_to 'Back', solutions_path %> </td>
-
 <% end %>
 </div>
+
+	    <td><%= link_to 'Back', solutions_path %> </td>

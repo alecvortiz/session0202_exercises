@@ -1,0 +1,86 @@
+<div class="edit_page"
+
+<%= form_for @solution do |f| %>
+	
+	<% if @solution.errors.any? %>
+		<div id="error_explanation" >
+			<h2>
+				<%= pluralize(@solution.errors.count, "error") %> prohibited this solution from being saved: </h2>
+			<ul>
+				<% @solution.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div class="edit_page">
+	<div class= "solutes">
+	<p> 
+		<%= f.label :solute_one %><br>
+		<%= f.text_field :solute_one %>
+	</p>
+
+	<p> 
+		<%= f.label :solute_two %><br>
+		<%= f.text_field :solute_two %>
+	</p>
+
+	<p>
+		<%= f.label :solute_three %><br>
+		<%= f.text_field :solute_three %>
+	</p>
+
+	<p> 
+		<%= f.label :solute_four %><br>
+		<%= f.text_field :solute_four %>
+	</p>
+
+	<p> 
+		<%= f.label :solute_five %><br>
+		<%= f.text_field :solute_five %>
+	</p>
+	</div>
+
+	<div class= "stocks">
+	<p> 
+		<%= f.label :stock_one %><br>
+		<%= f.text_field :stock_one %>
+	</p>
+
+	<p> 
+		<%= f.label :stock_two %><br>
+		<%= f.text_field :stock_two %>
+	</p>
+
+	<p> 
+		<%= f.label :stock_three %><br>
+		<%= f.text_field :stock_three %>
+	</p>
+
+	<p> 
+		<%= f.label :stock_four %><br>
+		<%= f.text_field :stock_four %>
+	</p>
+
+	<p> 
+		<%= f.label :stock_five %><br>
+		<%= f.text_field :stock_five %>
+	</p>
+	</div>
+
+	<div class="final_volume">
+	<p>
+		<%= f.label :final_volume %><br>
+		<%= f.text_field :final_volume %>
+	</p>
+	</div>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	</div>
+
+	<td><%= link_to 'Back', solutions_path %> </td>
+
+<% end %>
